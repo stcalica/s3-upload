@@ -11,6 +11,9 @@ inputs:
   package:
     description: 'Package to upload S3'
     default: ''
+  key:
+    description: 'Key'
+    default: ''
   AWS_SECRET_KEY:
     description: 'AWS Secret Key'
     default: ''

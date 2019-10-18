@@ -6,6 +6,7 @@ var AWS = require('aws-sdk');
 try {
   const bucketName = core.getInput('bucket');
   const package = core.getInput('package');
+  const package = core.getInput('key');
   const AWS_SECRET_KEY = core.getInput('AWS_SECRET_KEY');
   const AWS_SECRET_ID = core.getInput('AWS_SECRET_ID');
   const AWS_REGION = core.getInput('AWS_REGION');
@@ -15,7 +16,8 @@ try {
   console.log(body);
   const params = {
    Body: body,
-   Bucket: bucketName
+   Bucket: bucketName,
+   Key: key
    };
    s3.upload(params, (err, data) => {
      if(err){
