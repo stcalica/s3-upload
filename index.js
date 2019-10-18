@@ -18,12 +18,9 @@ try {
    Body: body,
    Bucket: bucketName
    };
-  s3.putObject(params, function(err, data) {
-    if (err) {
-      console.log(err, err.stack);
-      core.setFailed(err);
-    } else { console.log(data) };
-  });
+   s3.upload(params, function(err, data) {
+     console.log(err, data);
+   });
 
 } catch (error) {
   core.setFailed(error.message);
