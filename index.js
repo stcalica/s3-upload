@@ -22,8 +22,7 @@ try {
     if (err) {
       console.log(err, err.stack);
       core.setFailed(err);
-    }
-    else  console.log(data);
+    } else { console.log(data) };
   });
 
 } catch (error) {
