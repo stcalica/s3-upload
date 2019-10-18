@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - run: echo "<html><head><title>GH Actions Test</title></head><body><h1>YO THIS WORKS!</h1></body></html>" > index.html
-      - uses: stcalica/s3-upload
+      - uses: stcalica/s3-upload@master
         with:
           package: index.html
           bucket: temp-test-gh-action
