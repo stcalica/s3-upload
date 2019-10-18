@@ -18,7 +18,7 @@ try {
    Body: body,
    Bucket: bucketName
    };
-   s3.upload(params, function uploadCallback(err, data) {
+   s3.upload(params, (err, data) => {
      if(err){
        console.log(`Failed upload to ${bucketName}`);
        throw err;
@@ -28,5 +28,5 @@ try {
    });
 
 } catch (error) {
-  core.setFailed(error.message);
+ core.setFailed(error.message);
 }
