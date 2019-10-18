@@ -18,7 +18,7 @@ try {
       core.setFailed(err);
     }
   });
-
+  console.log(body);
   const params = {
    Body: body,
    Bucket: bucketName
