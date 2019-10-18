@@ -12,10 +12,12 @@ try {
   console.log(`Updating Bucket ${bucketName} with ${package}!`);
 
   const s3 = new AWS.S3({apiVersion: '2006-03-01', accessKeyId: AWS_SECRET_ID, secretAccessKey:AWS_SECRET_KEY, region:AWS_REGION  });
-  var body = fs.open(`./${package}`, (err,data) => {
+  var body = fs.readfile(`./${package}`, (err,data) => {
     if(err){
       console.log(err);
       core.setFailed(err);
+    } else {
+      return data;
     }
   });
   console.log(body);
