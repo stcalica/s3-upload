@@ -8,9 +8,6 @@ inputs:
   bucket:
     description: 'Bucket Name'
     default: ''
-  objectKey:
-    description: 'Object Key'
-    default: ''
   package:
     description: 'Package to upload S3'
     default: ''

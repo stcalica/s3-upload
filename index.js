@@ -5,7 +5,6 @@ var AWS = require('aws-sdk');
 
 try {
   const bucketName = core.getInput('bucket');
-  const key = core.getInput('objectKey');
   const package = core.getInput('package');
   const AWS_SECRET_KEY = core.getInput('AWS_SECRET_KEY');
   const AWS_SECRET_ID = core.getInput('AWS_SECRET_ID');
@@ -24,7 +23,7 @@ try {
       console.log(err, err.stack);
       core.setFailed(err);
     }
-    else     console.log(data);
+    else  console.log(data);
   });
 
 } catch (error) {
