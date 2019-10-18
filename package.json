@@ -24,7 +24,9 @@
   },
   "homepage": "https://github.com/stcalica/s3-upload#readme",
   "devDependencies": {
+    "@actions/core": "^1.1.3",
     "@types/node": "^12.11.1",
     "aws-sdk": "^2.552.0"
-  }
+  },
+  "dependencies": {}
 }
