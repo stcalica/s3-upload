@@ -13,7 +13,6 @@ try {
   console.log(`Updating Bucket ${bucketName} with ${package}!`);
   const s3 = new AWS.S3({apiVersion: '2006-03-01', accessKeyId: AWS_SECRET_ID, secretAccessKey:AWS_SECRET_KEY, region:AWS_REGION  });
   var body = fs.readFileSync(`./${package}`);
-  console.log(body);
   const params = {
    Body: body,
    Bucket: bucketName,

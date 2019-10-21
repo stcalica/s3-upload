@@ -1,5 +1,5 @@
-name: 'AWS Update Lambda Action'
-description: 'Update Lambda Function in AWS'
+name: 'AWS Update S3 Action'
+description: 'Update S3 Bucket in AWS'
 author: 'Kyle Calica'
 branding:
   icon: 'check-square'
